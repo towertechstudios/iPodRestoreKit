@@ -1,0 +1,20 @@
+iPod Restore Kit — Beta feedback
+
+Use the Issues tab on this GitHub repository.
+Project website: https://www.towertechstudios.com
+No automatic crash-upload service is configured.
+
+Include:
+- Version shown in About, macOS version, and Intel or Apple silicon.
+- iPod model/generation, Mac or Windows format, USB/FireWire/network connection.
+- What you clicked, what you expected, and the exact error message.
+- Whether the iPod still mounts and starts normally.
+- Relevant app log or macOS crash report, if available.
+
+Before sharing logs, review/remove serial numbers, hardware identifiers,
+account names, network addresses, filenames, tokens and private media details.
+Never send a password or Plex token. Do not publish your device safety backup
+or firmware partition dump; it may contain device-specific information.
+
+If restoring failed, report its current state before retrying. Do not unplug
+an iPod during an active firmware write.
