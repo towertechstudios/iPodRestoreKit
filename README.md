@@ -31,6 +31,16 @@ Availability varies by model, format, connection and macOS version. **This beta
 is not certified to restore every iPod.** Read [known limitations](docs/KNOWN-LIMITATIONS.md),
 especially before using network restoration or changing anything on a device.
 
+## Compatibility webpage
+
+[**Open the iPod compatibility chart →**](https://towertechstudios.github.io/iPodRestoreKit/)
+
+Compare 24 model groups with search, family filters, direct and network restore
+paths, recovery status and format limits. The page distinguishes implemented
+paths from unavailable features and hardware validation still needed.
+
+[GitHub Pages setup and maintenance](PAGES-SETUP.md) · [Page source](docs/index.html)
+
 ## Install
 
 1. Download and expand the release ZIP.
