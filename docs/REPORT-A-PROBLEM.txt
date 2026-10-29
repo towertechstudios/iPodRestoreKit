@@ -1,8 +1,8 @@
 iPod Restore Kit — Beta feedback
 
-Use the Issues tab on this GitHub repository.
+Share reports with the person who provided this beta.
 Project website: https://www.towertechstudios.com
-No automatic crash-upload service is configured.
+No dedicated beta issue tracker or crash-upload service is configured.
 
 Include:
 - Version shown in About, macOS version, and Intel or Apple silicon.

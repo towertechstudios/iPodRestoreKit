@@ -30,6 +30,8 @@ iPod Restore Kit also thanks the following projects and their contributors.
 
 ## Design, device data and artwork
 
+- **Jonathan Sterling / AquaUI contributors** — MIT-licensed Aqua color mixer and lozenge control backgrounds adapted for Classic buttons, transport controls and checkboxes on macOS 15+, plus scroller gradients adapted to native AppKit scrollbars. Pinned original source, license and integration notes are bundled in AquaUISource. https://github.com/jonsterling/AquaUI
+
 - **Zane Kleinberg (zzanehip), iTunes-Experiment** — design reference for the Classic interface. The app independently implements the visual direction; no upstream source, fonts or graphics from this project are bundled. https://github.com/zzanehip/iTunes-Experiment
 - **Christophe Fergeau, wtbw and gtkpod / libgpod contributors** — BSD-licensed hash58 checksum algorithm adapted to Swift for Classic/nano renaming (original source and license are included), plus reference device/model/color tables and iTunesDB/ArtworkDB record and image-format documentation for device identification, names and library metadata. https://github.com/gtkpod/libgpod
 - **AppleDB contributors** — external device artwork used when suitable Finder artwork is unavailable. https://appledb.dev/device-selection/

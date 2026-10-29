@@ -1,4 +1,4 @@
-iPod Restore Kit — 0.2.0 Public Beta 1
+iPod Restore Kit — 0.3.0 Public Beta 4
 Tower Tech Studios · Nico Maentanis
 
 REQUIREMENTS
@@ -7,12 +7,17 @@ Apple silicon Mac: macOS Big Sur 11 or newer.
 The native Compatibility interface is used on older supported releases.
 iPod touch is not supported. Feature availability varies by iPod and format.
 
-INSTALL
-1. Expand the downloaded ZIP on the Mac where you will use the app.
-2. Drag iPod Restore Kit Beta.app into Applications.
-3. Open it from Applications. Do not run the regular app and beta together.
+INSTALL WITH THE PKG
+1. Finish device operations, then quit the beta and the regular app.
+2. Open the .pkg and follow macOS Installer's steps.
+3. Open Applications > iPod Restore Kit Beta when installation finishes.
 
-This beta is locally/ad-hoc signed, not Developer ID signed or Apple-notarized.
+INSTALL WITH THE ZIP INSTEAD
+1. Expand the ZIP on the Mac where you will use the app.
+2. Drag iPod Restore Kit Beta.app into Applications.
+3. Open it from Applications. Run one app edition at a time.
+
+The app is ad-hoc signed. The installer is unsigned. Neither is Apple-notarized.
 macOS may block its first launch. If you trust the download, use Apple's
 per-app approval instructions after attempting to open it:
 https://support.apple.com/en-us/102445
@@ -41,4 +46,42 @@ Check Compatibility. Read KNOWN-LIMITATIONS.md before a network restore.
 HELP AND FEEDBACK
 See REPORT-A-PROBLEM.txt and RELEASE-NOTES.md.
 Website: https://www.towertechstudios.com
-No public beta download URL or automatic beta update feed is configured.
+App Updates checks GitHub releases for a signed update manifest.
+Only published releases with a valid signature and matching installer are offered.
+
+APP UPDATES
+Use the app menu > Check for App Updates, or Settings > Updates. Automatic
+checks run at launch and once per day while enabled. Only published GitHub
+releases with a valid pinned-key signature and matching installer are eligible.
+Download progress is displayed; Open Installer rechecks the package before
+launching the normal macOS Installer. Finish all device operations first.
+Existing beta users with App Updates can upgrade in the app. No private release key
+or GitHub token is bundled. The installer does not install a driver, launch
+agent or helper service and does not grant Automation/Accessibility access.
+
+FIRST-RUN APPEARANCE
+New installations use Modern, with System Default colors and Standard surface.
+Existing Modern/Classic preferences are retained. Choose Classic in Settings >
+Appearance if you prefer it. Catalina through Ventura use Compatibility UI.
+
+BETA 7 MEDIA SYNC
+Select downloaded purchases from the Music/TV library and use Sync to iPod.
+Eligible protected purchases continue through Apple sync preparation. In Finder,
+select the iPod under Locations, choose the prepared music playlist or selected
+Movies/TV titles, review any replacement prompt, then Apply/Sync. Apple handles
+account/device authorization; preparation alone does not transfer protected files.
+For Podcasts, use Sync > Podcasts > Allow Podcasts Access if macOS blocks the
+library, then Refresh Podcasts. Only downloaded episodes are listed.
+
+BETA 4: BACKUPS AND ARTWORK
+Backups & Migration > Backup Settings > Dynamic Backup Settings chooses Local
+or iCloud per iPod. Choose a folder inside iCloud Drive for cloud snapshots.
+Local/iCloud histories stay separate. Keep Shared Backup Data with snapshots.
+The app adds no separate encryption. Wait for Refresh iCloud Status to report
+upload completion; a saved folder is not proof that upload has finished.
+Missing cloud files must be downloaded before an incremental update can resume.
+
+Choose a Backup opens a visual gallery; selecting a card does not start restore.
+Sync Album Artwork is under My Library > Music > Selected Media. It repairs
+matching existing songs only, on supported direct-writer models. Safely eject
+and check covers on the physical iPod afterward.
