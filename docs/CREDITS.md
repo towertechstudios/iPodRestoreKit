@@ -85,3 +85,14 @@ All product names and marks belong to their respective owners. Acknowledgment do
 - **Apple Music and Apple TV scripting interfaces** — optional read-only source-library artwork export for Mac sync views. Cached images remain on the user's Mac; iPod artwork browsing retains its original device database source. These apps and their artwork are not bundled.
 - **Apple PhotoKit / Photos** — authorized, read-only album browsing and selected-image preparation for photo sync. The Photos library is not modified. https://developer.apple.com/documentation/photokit
 - **Apple Podcasts** — optional read-only local episode metadata and downloaded-file discovery. Its database schema is private and may change between macOS releases; no Podcasts software or episode content is redistributed.
+
+
+## YouTube downloads
+
+**yt-dlp 2026.10.26** — The yt-dlp contributors. Application code is Unlicense/public domain; the official standalone executable includes GPLv3+ components and is distributed under GPLv3+. Full third-party notices, binary license and upstream source are included. https://github.com/yt-dlp/yt-dlp
+
+**QuickJS-NG 0.17.0** — Fabrice Bellard, Charlie Gordon and QuickJS-NG contributors. MIT license. Universal interpreter rebuilt from the pinned source for the app’s macOS targets. https://github.com/quickjs-ng/quickjs
+
+**FFmpeg 9.0.2** — FFmpeg developers. LGPL 2.1 or later, built without GPL/nonfree/external codec components; local-file audio/video merging only. Source archive, license, source hashes and build script are included under the app’s Resources/YouTube folder. https://ffmpeg.org/
+
+The existing HandBrake engine converts downloaded video to the supported iPod profile. YouTube is a trademark of Google; this independent app is not affiliated with YouTube.

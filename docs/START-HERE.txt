@@ -1,4 +1,4 @@
-iPod Restore Kit — 0.3.0 Public Beta 4
+iPod Restore Kit — 0.3.0 Public Beta 5
 Tower Tech Studios · Nico Maentanis
 
 REQUIREMENTS
@@ -73,15 +73,20 @@ account/device authorization; preparation alone does not transfer protected file
 For Podcasts, use Sync > Podcasts > Allow Podcasts Access if macOS blocks the
 library, then Refresh Podcasts. Only downloaded episodes are listed.
 
-BETA 4: BACKUPS AND ARTWORK
-Backups & Migration > Backup Settings > Dynamic Backup Settings chooses Local
-or iCloud per iPod. Choose a folder inside iCloud Drive for cloud snapshots.
-Local/iCloud histories stay separate. Keep Shared Backup Data with snapshots.
-The app adds no separate encryption. Wait for Refresh iCloud Status to report
-upload completion; a saved folder is not proof that upload has finished.
-Missing cloud files must be downloaded before an incremental update can resume.
+BETA 5: BACKUPS, MEDIA AND PLAYBACK
+Dynamic Backup Settings changes a device's Local/iCloud destination by moving
+and verifying its history, creating a new base, and cleaning up the source only
+after integrity and (for iCloud) upload confirmation. Keep the same backups idle
+on other Macs during a move. Cancel Move, Keep Both retains existing copies.
+macOS can cache cloud data locally; reading/verifying/restoring downloads it.
+Use iCloud Backups > Find Cloud Backups on another Mac with the same account.
 
-Choose a Backup opens a visual gallery; selecting a card does not start restore.
-Sync Album Artwork is under My Library > Music > Selected Media. It repairs
-matching existing songs only, on supported direct-writer models. Safely eject
-and check covers on the physical iPod afterward.
+Backup before media sync is on by default. Dynamic Backup reuses unchanged data;
+without it, each sync creates a full local backup. Change this in Settings if
+needed. Backup failure stops before media writes.
+
+Media > YouTube can download and convert a single public/unlisted video. Turn
+off automatic sync for Mac-only preparation. Downloads are TV Shows with the
+channel as show name. Device sync still requires a supported writer/video model.
+
+See RELEASE-NOTES.md for playback, album details and device-picture changes.

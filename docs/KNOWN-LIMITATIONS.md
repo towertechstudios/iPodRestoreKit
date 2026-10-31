@@ -1,4 +1,4 @@
-# Public 0.3 Beta 4 — compatibility and limitations
+# Public 0.3 Beta 5 — compatibility and limitations
 
 Only firmware-supported Mac/HFS+ and Windows/FAT formats are restore targets.
 APFS and exFAT are not supported iPod boot formats. Shuffle models use Windows
@@ -51,6 +51,37 @@ Direct media sync still needs a supported database writer; nano 5–7 and shuffl
 
 ## Beta 4 cloud and artwork limits
 
-iCloud uses a chosen iCloud Drive folder. macOS can cache files locally; this is not a server-side backup API or a promise of zero local disk use. Upload status comes from macOS. A missing cloud baseline stops incremental updates. Local and iCloud histories are separate; cloud retention/deletion is managed in Finder. No additional backup encryption is supplied. Live account transfer still needs verification.
+iCloud uses a chosen iCloud Drive folder. macOS can cache files locally; this is not a server-side backup API or a promise of zero local disk use. Upload status comes from macOS. A missing cloud baseline stops incremental updates. Changing destinations moves the matching history with verification and upload-gated source cleanup; cloud retention/deletion is managed in Finder. No additional backup encryption is supplied. Live account transfer still needs verification.
 
 Artwork-only repair uses exact encoded-content matching with available local covers on supported conventional database writers. It does not authorize protected files or add direct writer support for later nano/shuffle models. Physical artwork display and destructive nano restoration were not performed during Beta 4 verification.
+
+## Beta 5 additions and validation
+
+Dynamic destination changes now move matching histories and create a consolidated
+base, with source cleanup only after verified copying and confirmed cloud upload.
+Interrupted moves are resumable. Manual backup copies remain separate. Temporary
+cloud service errors can wait/retry; account sign-in, quota and network remain
+macOS/user responsibilities. Live cross-Mac account behavior needs testing.
+
+YouTube supports single public/unlisted video URLs with bundled download/merge/
+conversion tools. No cookies or account login are supplied. Private/restricted
+videos, playlists, live streams and DRM are unsupported. Service changes may
+require newer tools. iPod video capability, writer and artwork limits still apply.
+
+Backup-first sync is enabled by default: without Dynamic Backup it makes a full
+local backup each time. Enable Dynamic Backup to reuse unchanged data, or change
+the backup-before-sync setting. Protected purchases keep the Apple handoff.
+
+The per-device catalog stores paths/metadata and cover references, not copies of
+audio/video. Reconnect and Refresh inventory files; small idle signatures notice
+normal library changes, but arbitrary external edits can require Refresh. Source
+media must remain connected for playback. Unknown color/generation is not inferred
+from capacity. Custom or cached volume icons take priority over native icons.
+Older cloud catalogs without thumbnail bytes retain their existing image fallback.
+
+Current suite: 352 checks, 342 passed and 10 opt-in/reference checks skipped.
+Three macOS-bookmark checks passed after rerunning with folder-service access.
+These supersede earlier historical test counts above. No physical restore/sync
+was run for this release. Live two-device playback, generation/color evidence,
+cloud account transfer, startup Apple-app automation and on-device media display
+still need validation. Purchase tags are metadata, not authorization evidence.
