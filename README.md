@@ -4,32 +4,31 @@
 
 A native Mac toolkit for classic iPods: browse media, preserve libraries, transfer content and restore matching firmware on supported devices.
 
-**Current version: 0.3.0 Public Beta 5 · Build 20261031.57 · Experimental**
+**Current version: 0.3.0 Public Beta 6 · Build 20261102.75 · Experimental**
 
 ## Download and install
 
-[**Download Beta 5 →**](https://github.com/towertechstudios/iPodRestoreKit/releases/tag/v0.3.0-beta.5)
+[**Download Beta 6 →**](https://github.com/towertechstudios/iPodRestoreKit/releases/tag/v0.3.0-beta.6)
 
-Finish iPod operations and quit the app, then download **iPod-Restore-Kit-0.3.0-beta.5-macOS-universal.pkg** from the release's Assets. The installer places the beta in Applications. For manual installation, expand **iPod-Restore-Kit-0.3.0-beta.5-macOS-universal.zip** and move the app to Applications. Existing beta users can choose **Check for App Updates…**.
+Finish iPod operations and quit the app, then download **iPod-Restore-Kit-0.3.0-beta.6-macOS-universal.pkg** from the release's Assets. The installer places the beta in Applications. For manual installation, expand **iPod-Restore-Kit-0.3.0-beta.6-macOS-universal.zip** and move the app to Applications. Existing beta users can choose **Check for App Updates…**.
 
 GitHub's automatic “Source code” archives contain repository documentation, not the app. This repository hosts downloads, release information and the compatibility website; the main app source is not included.
 
 - **Intel:** macOS Catalina 10.15.7 or newer.
 - **Apple silicon:** macOS Big Sur 11 or newer.
 - Modern and Classic use macOS Sonoma or newer; older supported versions use the native Compatibility interface.
-- **iPod touch is unsupported.**
+- **iPod touch is experimental and off by default:** enable Settings → General. Native touch media syncing and Dynamic/iCloud touch backups are not available.
 
 The app is **ad-hoc signed**, the installer is unsigned, and neither is Apple-notarized. [Apple's per-app approval instructions](https://support.apple.com/en-us/102445) describe first-launch options; do not disable Gatekeeper. Signed updater metadata is a separate protection. See [START-HERE](docs/START-HERE.txt).
 
-## What's new in Beta 5
+## What's new in Beta 6
 
-- **Dynamic backup moves and cloud discovery:** verified, resumable destination changes, a consolidated base, upload-gated source cleanup, lower-memory checksums and restore preparation on another Mac. macOS may cache cloud data locally.
-- **Backup-first sync:** backup, individual media categories and metadata verification are separate steps. Dynamic Backup reuses unchanged files; otherwise a full backup is made before sync.
-- **YouTube downloads:** bundled conversion, TV Show/channel metadata, artwork, saved downloads and deletion; sync requires a compatible video iPod and writer.
-- **Faster libraries and steadier playback:** incremental per-iPod metadata catalogs, scoped preview shutdown and fewer updates while playing. Changing views or working on another iPod no longer closes the player.
-- **Album and purchase details:** album artwork/year/count/length banners and embedded Purchasing Apple ID/Name in Get Info.
-- **Device appearance:** hardware-based classic/video generation labels, gray 7th versus black 6th-generation Classic images, and cached backup device pictures.
-- **Compact menu activity and startup refresh:** progress icon/popover and background Music/TV library refresh with ownership-aware closing.
+- Full-screen Now Playing from the playback artwork, smooth Reduce Motion-aware transitions, shared Up Next, seeking and playback controls.
+- Play Next / Add to Queue and source-aware disconnect handling.
+- Mac-wide sound output selection and nearby AirPlay receiver discovery; new receiver connections use macOS Sound settings.
+- Optional iPod touch support, off by default, with bundled native device tools and supported media/storage readers. Experimental model/OS limits apply.
+- More resilient Dynamic Backup moves during temporary iCloud outages.
+- Scrolling Classic General settings, immediate theme changes in open Settings and cleaner toolbar controls.
 
 [Full release notes](docs/RELEASE-NOTES.md) · [Known limitations](docs/KNOWN-LIMITATIONS.md)
 
@@ -41,7 +40,7 @@ Browse music, videos, photos and playlists; preview media; export files with sup
 
 The chart covers 25 model groups with search, family filters, direct/network restore, recovery and format limits, plus direct media/photo/artwork support and backup-destination requirements. A library category appearing in the app does not imply that its direct sync writer is implemented. Later nano and shuffle direct writers, network recovery and some transport paths remain unavailable.
 
-**Implementation is not universal hardware certification.** Beta 5 has 342 passing checks and 10 optional skips, plus architecture/package checks. Three bookmark checks passed after rerunning with access to the macOS folder-permission service. No actual iPod restore, sync or media write was run for these changes. The beta shares **Documents/iRestore** with the regular app; keep independent backups and run one edition at a time. Keep **Shared Backup Data** beside its snapshots. Automatic snapshot retention is local-only; cloud deletion is managed in Finder.
+**Implementation is not universal hardware certification.** Beta 6 has 342 passing checks and 10 optional skips, plus architecture/package checks. Three bookmark checks passed after rerunning with access to the macOS folder-permission service. No actual iPod restore, sync or media write was run for these changes. The beta shares **Documents/iRestore** with the regular app; keep independent backups and run one edition at a time. Keep **Shared Backup Data** beside its snapshots. Automatic snapshot retention is local-only; cloud deletion is managed in Finder.
 
 [Pages setup](PAGES-SETUP.md) · [Chart source](docs/index.html)
 

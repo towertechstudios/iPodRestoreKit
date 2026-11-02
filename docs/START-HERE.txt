@@ -1,11 +1,12 @@
-iPod Restore Kit — 0.3.0 Public Beta 5
+iPod Restore Kit — 0.3.0 Public Beta 6
 Tower Tech Studios · Nico Maentanis
 
 REQUIREMENTS
 Intel Mac: macOS Catalina 10.15.7 or newer.
 Apple silicon Mac: macOS Big Sur 11 or newer.
 The native Compatibility interface is used on older supported releases.
-iPod touch is not supported. Feature availability varies by iPod and format.
+iPod touch support is experimental and off by default in Settings > General.
+Feature availability varies by iPod, OS and format.
 
 INSTALL WITH THE PKG
 1. Finish device operations, then quit the beta and the regular app.
@@ -90,3 +91,9 @@ off automatic sync for Mac-only preparation. Downloads are TV Shows with the
 channel as show name. Device sync still requires a supported writer/video model.
 
 See RELEASE-NOTES.md for playback, album details and device-picture changes.
+
+BETA 6
+Click playback artwork for full-screen Now Playing and Up Next.
+iPod touch support starts OFF; enable it under Settings → General only if needed.
+AirPlay discovery requires local-network access; new system-wide connections are
+selected in Sound settings. Read KNOWN-LIMITATIONS.md before using experimental features.

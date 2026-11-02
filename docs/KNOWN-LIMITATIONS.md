@@ -1,4 +1,4 @@
-# Public 0.3 Beta 5 — compatibility and limitations
+# Public 0.3 Beta 6 — compatibility and limitations
 
 Only firmware-supported Mac/HFS+ and Windows/FAT formats are restore targets.
 APFS and exFAT are not supported iPod boot formats. Shuffle models use Windows
@@ -55,7 +55,7 @@ iCloud uses a chosen iCloud Drive folder. macOS can cache files locally; this is
 
 Artwork-only repair uses exact encoded-content matching with available local covers on supported conventional database writers. It does not authorize protected files or add direct writer support for later nano/shuffle models. Physical artwork display and destructive nano restoration were not performed during Beta 4 verification.
 
-## Beta 5 additions and validation
+## Beta 6 additions and validation
 
 Dynamic destination changes now move matching histories and create a consolidated
 base, with source cleanup only after verified copying and confirmed cloud upload.
@@ -79,9 +79,34 @@ media must remain connected for playback. Unknown color/generation is not inferr
 from capacity. Custom or cached volume icons take priority over native icons.
 Older cloud catalogs without thumbnail bytes retain their existing image fallback.
 
-Current suite: 352 checks, 342 passed and 10 opt-in/reference checks skipped.
+Historical Beta 5 suite: 352 checks, 342 passed and 10 opt-in/reference checks skipped.
 Three macOS-bookmark checks passed after rerunning with folder-service access.
 These supersede earlier historical test counts above. No physical restore/sync
 was run for this release. Live two-device playback, generation/color evidence,
 cloud account transfer, startup Apple-app automation and on-device media display
 still need validation. Purchase tags are metadata, not authorization evidence.
+
+## Current Beta 6 experimental support
+
+iPod touch support is off by default under Settings → General. Explicit saved
+choices are retained. It uses bundled native tools for supported identity, trust,
+local backup, imported-IPSW operations and read-only media/storage access. Native
+touch media syncing, Dynamic/iCloud touch backups and general cross-device
+migration are not implemented. All touch generations and OS versions are not
+physically validated. Advanced Legacy iOS Kit shell/downgrade/jailbreak recipes
+are not integrated. Tools and their source/licenses are included.
+
+The audio menu lists Mac output devices and nearby Bonjour AirPlay advertisements.
+Only available Core Audio outputs can be selected directly. Advertised receivers
+are connected through macOS Sound settings. Discovery depends on local-network
+permission, receiver advertising and network configuration; peer-to-peer or
+unadvertised devices may appear only in Apple's own controls. No live receiver
+routing was tested.
+
+The full-screen player shares the existing playback session; render tests do not
+certify live native full-screen transitions or protected playback. Reduce Motion
+disables new player animations.
+
+Beta 6 verification supersedes the historical counts above: 437 distinct checks,
+425 passed, 12 optional/reference skips, zero failures. No live device write or
+audio-output change was performed for this release.

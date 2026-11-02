@@ -1,29 +1,24 @@
-# iPod Restore Kit 0.3.0 — Public Beta 5
+# iPod Restore Kit 0.3 — Public Beta 6
 
-Build **20261031.57**. Upgrade with **Check for App Updates…**, or use the installer or ZIP below.
+Build **20261102.75** · macOS Catalina 10.15.7+ on Intel; Big Sur 11+ on Apple silicon. Modern and Classic require Sonoma or newer.
 
-## Changes since Beta 4
+## Changes since Public Beta 5
 
-- **Safer Dynamic Backup moves:** changing Local/iCloud destination transfers the matching history, verifies it, creates a consolidated base, and only then cleans up the old location. iCloud cleanup also waits for confirmed upload. Interrupted moves can resume; cancellation keeps existing backups. Manual backups retain separate Copy to Mac/iCloud actions. Streaming checksums reduce memory use during long moves.
-- **Cloud backups on another Mac:** discover existing iCloud backup catalogs, verify their files and prepare them for restore. Temporary upload-service failures retry with bounded delays. macOS still controls cloud caching, upload and download; zero local disk use is not guaranteed.
-- **Responsive controls and playlists:** background cloud checks no longer disable device actions or normal playlist loading.
-- **Backup-first sync:** a backup is the first step by default, followed by each selected media category and metadata verification. Enabled Dynamic Backups reuse unchanged data; otherwise this creates a full local backup. A failed/canceled backup stops before media writes. Sync prevents idle sleep.
-- **YouTube in Media:** download a single public/unlisted video, convert it with bundled tools and prepare it for a compatible video iPod. New downloads are TV Shows with the channel as the show. Titles, dates, descriptions and artwork are retained. Saved downloads can be previewed, synced or deleted from the Mac. Account-restricted videos, DRM, playlists and live streams are unsupported.
-- **Incremental per-iPod library catalogs:** cache file paths, metadata and artwork references for mounted devices; update changed records instead of rebuilding unchanged libraries. Media plays from the iPod. Library scans respect the automatic-scan preference and do not remount ejected devices.
-- **Smoother playback:** switching views/themes, additive sync and work on another iPod no longer close the current player. Destructive operations stop previews belonging to their target. Playback updates do less work; Explicit tracks show a red E.
-- **Richer album and song details:** selected albums show artwork, artist, year, song count and length. Get Info shows embedded Purchasing Apple ID and Purchasing Name when available. Missing values are not guessed from the Mac account.
-- **Better device labels and pictures:** distinguish iPod classic 6th/6.5/7th and iPod video 5th/5.5 generations from hardware evidence. Gray 7th-generation Classics use the separate Finder image; black 6th-generation models stay black. Cached device pictures remain available for backups; new cloud catalogs carry a portable thumbnail.
-- **Compact Mac menu activity:** an iPod icon and progress ring show activity; click for details, steps and available controls. The minimized-only preference remains available.
-- **Apple library startup refresh:** open Music/TV in the background, refresh the local lists, then close only the app processes started by this refresh. Apps already open are retained.
+- **Full-screen Now Playing:** click the artwork beside the status bar for large artwork, song details, seek controls, volume, Mac sound output and Up Next. Close or press Escape without stopping music. Smooth opening, artwork/play-pause and queue transitions respect Reduce Motion.
+- **Music queue:** Play Next and Add to Queue, remove upcoming songs, clear Up Next and automatic advance. Disconnecting the playing source stops playback; disconnecting another iPod removes its upcoming tracks.
+- **Mac audio output:** the themed AirPlay button lists available output devices and checks the current Mac output. Nearby Bonjour AirPlay advertisements appear separately; new receiver connections use macOS Sound settings. Receiver visibility depends on the network and macOS discovery; the app does not claim every advertised receiver is connected or compatible.
+- **Optional iPod touch:** off by default in Settings → General. Existing explicit choices are retained. Bundled native tools support experimental identity, pairing, backup, supported media reading/playback, storage information and imported-IPSW operations. Native touch media syncing and Dynamic/iCloud touch backups remain unavailable.
+- **Built-in device tools:** universal Intel/Apple silicon helpers and corresponding source archives/licenses; no separate Homebrew or Legacy iOS Kit installation required. Advanced shell, jailbreak, SHSH and tethered/custom downgrade recipes are not integrated.
+- **Dynamic backup reliability:** resumable cloud-move recovery, retained folder access and safer handling of temporary iCloud outages. Backups stay protected until destination checks and required upload confirmation finish.
+- **Shared touch Summary and native Finder icons:** aligned layouts, diagnostics and measured storage categories, plus additional touch model/color images.
+- **Settings and toolbar fixes:** Classic General scrolls to all sections; open Settings updates on theme changes. Modern volume sits beside playback controls. Redundant automatic-action buttons are removed from normal screens; Diagnostics and failed-read retries remain.
 
-## Verification and limits
+## Validation and limitations
 
-**352 automated checks: 342 passed, 10 optional checks skipped.** Three cloud-refresh checks initially could not access macOS's folder-permission service in the restricted test run; they passed when rerun with that access. Fixtures cover backup integrity/moves, cancellation, incremental catalogs, device labels/colors, scoped playback, purchase tags and media metadata. Narrow/wide album banners and native device images were rendered and inspected. Universal Intel/Apple silicon packaging and update integrity were verified.
+The release includes automated queue, output selection, discovery-name, default-setting, backup and media tests, plus isolated small/large player and Settings/theme renders. **425 checks passed, 12 optional/reference checks skipped, zero failures.** This release pass does not perform live iPod writes or audio output changes. Live AirPlay routing, full-screen transitions during real playback, real touch model/OS combinations and cross-Mac iCloud behavior still require hardware checks.
 
-Live two-iPod playback, physical gray/black detection, cross-Mac iCloud-account moves and physical sync/restore still need verification. This is an experimental beta, not certification of every model. Existing firmware, network, protected-content and direct-writer limitations remain; see **KNOWN-LIMITATIONS.md** and the [compatibility chart](https://towertechstudios.github.io/iPodRestoreKit/). No real iPod was erased, flashed or synced for this release validation.
+This is an experimental beta. Restore, media writing, network operation and protected purchases retain their existing model-specific requirements. The app does not bypass Apple authorization or firmware signing.
 
-Intel: **macOS Catalina 10.15.7+**. Apple silicon: **macOS Big Sur 11+**. Modern/Classic require Sonoma or newer; older supported systems use Compatibility. iPod touch is unsupported. Finish operations and quit the old app before installing. Keep Shared Backup Data with snapshots and retain an independent backup.
+The app is ad-hoc signed and the installer unsigned; neither is Apple-notarized. The pinned-key updater signature protects the release manifest separately. Finish all iPod operations and quit the old app before installing.
 
-The app is ad-hoc signed, the installer unsigned, and neither is Apple-notarized. Pinned-key signed updater metadata is a separate integrity check.
-
-App: Nico Maentanis — [Tower Tech Studios](https://www.towertechstudios.com). Icon: Shahzeb Ali ([TCHGOD](https://www.youtube.com/@tchgod)).
+Created by Nico Maentanis — [Tower Tech Studios](https://www.towertechstudios.com). App icon by Shahzeb Ali ([TCHGOD](https://www.youtube.com/@tchgod)).
